@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <columnConstraints>
+      <ColumnConstraints />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints />
+   </rowConstraints>
+   <children>
+      <AnchorPane prefHeight="500.0" prefWidth="920.0">
+         <children>
+            <TabPane prefHeight="500.0" prefWidth="920.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Current Weather">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="91.0" layoutY="40.0" text="City" />
+                              <Label layoutX="366.0" layoutY="40.0" text="Country" />
+                              <TextField fx:id="curr_city" layoutX="127.0" layoutY="35.0" promptText="Enter City" />
+                              <TextField fx:id="curr_country" layoutX="427.0" layoutY="35.0" promptText="Enter Country" />
+                              <Button fx:id="curr_getWeather" layoutX="671.0" layoutY="35.0" mnemonicParsing="false" onAction="#curr_getWeather" text="Get Current Weather" />
+                              <ImageView fx:id="curr_image" fitHeight="100.0" fitWidth="100.0" layoutX="149.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true" />
+                              <Label layoutX="347.0" layoutY="183.0" prefWidth="82.0" text="Description:" />
+                              <Label layoutX="347.0" layoutY="216.0" text="Temperature:" />
+                              <Label layoutX="347.0" layoutY="246.0" text="Pressure:" />
+                              <Label layoutX="347.0" layoutY="279.0" text="Humidity:" />
+                              <Label layoutX="347.0" layoutY="308.0" text="Wind:" />
+                              <Label fx:id="curr_desc" alignment="CENTER_RIGHT" layoutX="441.0" layoutY="184.0" prefHeight="17.0" prefWidth="100.0" />
+                              <Label fx:id="curr_temp" alignment="CENTER_RIGHT" layoutX="441.0" layoutY="217.0" prefHeight="17.0" prefWidth="100.0" />
+                              <Label fx:id="curr_press" alignment="CENTER_RIGHT" layoutX="441.0" layoutY="247.0" prefHeight="17.0" prefWidth="100.0" />
+                              <Label fx:id="curr_hum" alignment="CENTER_RIGHT" layoutX="441.0" layoutY="280.0" prefHeight="17.0" prefWidth="100.0" />
+                              <Label fx:id="curr_wind" layoutX="387.0" layoutY="309.0" prefHeight="17.0" prefWidth="339.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="5 Day Weather Forecast">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="91.0" layoutY="40.0" text="City" />
+                              <Label layoutX="366.0" layoutY="40.0" text="Country" />
+                              <TextField fx:id="fore_city" layoutX="127.0" layoutY="35.0" promptText="Enter City" />
+                              <TextField fx:id="fore_country" layoutX="427.0" layoutY="35.0" promptText="Enter Country" />
+                              <Button fx:id="fore_getWeather" layoutX="671.0" layoutY="35.0" mnemonicParsing="false" onAction="#fore_getWeather" text="Get Weather Forecast" />
+                              <ImageView fx:id="fore_image1" fitHeight="100.0" fitWidth="100.0" layoutX="41.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" />
+                              <ImageView fx:id="fore_image2" fitHeight="100.0" fitWidth="100.0" layoutX="211.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" translateX="10.0" />
+                              <ImageView fx:id="fore_image3" fitHeight="100.0" fitWidth="100.0" layoutX="381.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" translateX="20.0" />
+                              <ImageView fx:id="fore_image4" fitHeight="100.0" fitWidth="100.0" layoutX="551.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" translateX="30.0" />
+                              <ImageView fx:id="fore_image5" fitHeight="100.0" fitWidth="100.0" layoutX="721.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true" translateX="40.0" />
+                              <Label layoutX="18.0" layoutY="280.0" prefWidth="82.0" text="Description:" translateY="20.0" />
+                              <Label layoutX="18.0" layoutY="330.0" text="Temperature:" translateY="20.0" />
+                              <Label layoutX="18.0" layoutY="355.0" text="Pressure:" translateY="20.0" />
+                              <Label layoutX="18.0" layoutY="380.0" text="Humidity:" translateY="20.0" />
+                              <Label layoutX="18.0" layoutY="405.0" text="Wind:" translateY="20.0" />
+                              <Label fx:id="fore_desc1" alignment="CENTER_RIGHT" layoutX="18.0" layoutY="305.0" prefHeight="17.0" prefWidth="165.0" translateY="20.0" />
+                              <Label fx:id="fore_temp1" alignment="CENTER_RIGHT" layoutX="111.0" layoutY="330.0" prefHeight="17.0" prefWidth="72.0" textAlignment="RIGHT" translateY="20.0" />
+                              <Label fx:id="fore_press1" alignment="CENTER_RIGHT" layoutX="91.0" layoutY="355.0" prefHeight="17.0" prefWidth="92.0" textAlignment="RIGHT" translateY="20.0" />
+                              <Label fx:id="fore_hum1" alignment="CENTER_RIGHT" layoutX="80.0" layoutY="380.0" prefHeight="17.0" prefWidth="103.0" textAlignment="RIGHT" translateY="20.0" />
+                              <Label fx:id="fore_wind1" layoutX="56.0" layoutY="405.0" prefHeight="17.0" prefWidth="139.0" translateY="20.0" />
+                              <Label layoutX="188.0" layoutY="280.0" prefWidth="82.0" text="Description:" translateX="10.0" translateY="20.0" />
+                              <Label layoutX="188.0" layoutY="330.0" text="Temperature:" translateX="10.0" translateY="20.0" />
+                              <Label layoutX="188.0" layoutY="355.0" text="Pressure:" translateX="10.0" translateY="20.0" />
+                              <Label layoutX="188.0" layoutY="380.0" text="Humidity:" translateX="10.0" translateY="20.0" />
+                              <Label layoutX="188.0" layoutY="405.0" text="Wind:" translateX="10.0" translateY="20.0" />
+                              <Label fx:id="fore_desc2" alignment="CENTER_RIGHT" layoutX="188.0" layoutY="305.0" prefHeight="17.0" prefWidth="166.0" translateX="10.0" translateY="20.0" />
+                              <Label fx:id="fore_temp2" alignment="CENTER_RIGHT" layoutX="281.0" layoutY="330.0" prefHeight="17.0" prefWidth="74.0" translateX="10.0" translateY="20.0" />
+                              <Label fx:id="fore_press2" alignment="CENTER_RIGHT" layoutX="261.0" layoutY="355.0" prefHeight="17.0" prefWidth="94.0" translateX="10.0" translateY="20.0" />
+                              <Label fx:id="fore_hum2" alignment="CENTER_RIGHT" layoutX="250.0" layoutY="380.0" prefHeight="17.0" prefWidth="105.0" translateX="10.0" translateY="20.0" />
+                              <Label fx:id="fore_wind2" layoutX="226.0" layoutY="405.0" prefHeight="17.0" prefWidth="138.0" translateX="10.0" translateY="20.0" />
+                              <Label layoutX="358.0" layoutY="280.0" prefWidth="82.0" text="Description:" translateX="20.0" translateY="20.0" />
+                              <Label layoutX="358.0" layoutY="330.0" text="Temperature:" translateX="20.0" translateY="20.0" />
+                              <Label layoutX="358.0" layoutY="355.0" text="Pressure:" translateX="20.0" translateY="20.0" />
+                              <Label layoutX="358.0" layoutY="380.0" text="Humidity:" translateX="20.0" translateY="20.0" />
+                              <Label layoutX="358.0" layoutY="405.0" text="Wind:" translateX="20.0" translateY="20.0" />
+                              <Label fx:id="fore_desc3" alignment="CENTER_RIGHT" layoutX="358.0" layoutY="305.0" prefHeight="17.0" prefWidth="167.0" translateX="20.0" translateY="20.0" />
+                              <Label fx:id="fore_temp3" alignment="CENTER_RIGHT" layoutX="451.0" layoutY="330.0" prefHeight="17.0" prefWidth="75.0" translateX="20.0" translateY="20.0" />
+                              <Label fx:id="fore_press3" alignment="CENTER_RIGHT" layoutX="431.0" layoutY="355.0" prefHeight="17.0" prefWidth="95.0" translateX="20.0" translateY="20.0" />
+                              <Label fx:id="fore_hum3" alignment="CENTER_RIGHT" layoutX="420.0" layoutY="380.0" prefHeight="17.0" prefWidth="107.0" translateX="20.0" translateY="20.0" />
+                              <Label fx:id="fore_wind3" layoutX="396.0" layoutY="405.0" prefHeight="17.0" prefWidth="140.0" translateX="20.0" translateY="20.0" />
+                              <Label layoutX="528.0" layoutY="280.0" prefWidth="82.0" text="Description:" translateX="30.0" translateY="20.0" />
+                              <Label layoutX="528.0" layoutY="330.0" text="Temperature:" translateX="30.0" translateY="20.0" />
+                              <Label layoutX="528.0" layoutY="355.0" text="Pressure:" translateX="30.0" translateY="20.0" />
+                              <Label layoutX="528.0" layoutY="380.0" text="Humidity:" translateX="30.0" translateY="20.0" />
+                              <Label layoutX="528.0" layoutY="405.0" text="Wind:" translateX="30.0" translateY="20.0" />
+                              <Label fx:id="fore_desc4" alignment="CENTER_RIGHT" layoutX="528.0" layoutY="305.0" prefHeight="17.0" prefWidth="169.0" translateX="30.0" translateY="20.0" />
+                              <Label fx:id="fore_temp4" alignment="CENTER_RIGHT" layoutX="621.0" layoutY="330.0" prefHeight="17.0" prefWidth="76.0" translateX="30.0" translateY="20.0" />
+                              <Label fx:id="fore_press4" alignment="CENTER_RIGHT" layoutX="601.0" layoutY="355.0" prefHeight="17.0" prefWidth="96.0" translateX="30.0" translateY="20.0" />
+                              <Label fx:id="fore_hum4" alignment="CENTER_RIGHT" layoutX="590.0" layoutY="380.0" prefHeight="17.0" prefWidth="108.0" translateX="30.0" translateY="20.0" />
+                              <Label fx:id="fore_wind4" layoutX="566.0" layoutY="405.0" prefHeight="17.0" prefWidth="139.0" translateX="30.0" translateY="20.0" />
+                              <Label layoutX="698.0" layoutY="280.0" prefWidth="82.0" text="Description:" translateX="40.0" translateY="20.0" />
+                              <Label layoutX="698.0" layoutY="330.0" text="Temperature:" translateX="40.0" translateY="20.0" />
+                              <Label layoutX="698.0" layoutY="355.0" text="Pressure:" translateX="40.0" translateY="20.0" />
+                              <Label layoutX="698.0" layoutY="380.0" text="Humidity:" translateX="40.0" translateY="20.0" />
+                              <Label layoutX="698.0" layoutY="405.0" text="Wind:" translateX="40.0" translateY="20.0" />
+                              <Label fx:id="fore_desc5" alignment="CENTER_RIGHT" layoutX="698.0" layoutY="305.0" prefHeight="17.0" prefWidth="151.0" translateX="40.0" translateY="20.0" />
+                              <Label fx:id="fore_temp5" alignment="CENTER_RIGHT" layoutX="791.0" layoutY="330.0" prefHeight="17.0" prefWidth="59.0" translateX="40.0" translateY="20.0" />
+                              <Label fx:id="fore_press5" alignment="CENTER_RIGHT" layoutX="771.0" layoutY="355.0" prefHeight="17.0" prefWidth="80.0" translateX="40.0" translateY="20.0" />
+                              <Label fx:id="fore_hum5" alignment="CENTER_RIGHT" layoutX="760.0" layoutY="380.0" prefHeight="17.0" prefWidth="91.0" translateX="40.0" translateY="20.0" />
+                              <Label fx:id="fore_wind5" layoutX="736.0" layoutY="405.0" prefHeight="17.0" prefWidth="127.0" translateX="40.0" translateY="20.0" />
+                              <Label fx:id="fore_date1" alignment="CENTER" layoutX="30.0" layoutY="101.0" prefHeight="17.0" prefWidth="139.0" textAlignment="CENTER" />
+                              <Label fx:id="fore_date2" alignment="CENTER" layoutX="200.0" layoutY="101.0" prefHeight="17.0" prefWidth="140.0" textAlignment="CENTER" translateX="10.0" />
+                              <Label fx:id="fore_date3" alignment="CENTER" layoutX="370.0" layoutY="101.0" prefHeight="17.0" prefWidth="140.0" textAlignment="CENTER" translateX="20.0" />
+                              <Label fx:id="fore_date4" alignment="CENTER" layoutX="540.0" layoutY="101.0" prefHeight="17.0" prefWidth="140.0" textAlignment="CENTER" translateX="30.0" />
+                              <Label fx:id="fore_date5" alignment="CENTER" layoutX="710.0" layoutY="101.0" prefHeight="17.0" prefWidth="140.0" textAlignment="CENTER" translateX="40.0" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
